@@ -38,14 +38,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         initializeApp()
         
     }
     
     func initializeApp() {
         appTitleLabel.text = appTitle
+        setDelegateForUIComponents()
+    }
+    
+    func setDelegateForUIComponents() {
         billTF.delegate = self
+        
     }
 
     @IBAction func tipSliderChanged(_ sender: UISlider) {
